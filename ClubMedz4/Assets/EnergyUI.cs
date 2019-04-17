@@ -15,7 +15,7 @@ namespace TMPro.Examples
 
         private TMP_Text m_text;
 
-        private const string k_label = "Energy: <#ff0000>{0}</color>";
+        private const string k_label = "Energy: <#ff0000>{0}%</color>";
         private bool sleeping = false;
 
         public static float energyLevel = 100.0f;
@@ -40,8 +40,8 @@ namespace TMPro.Examples
             // Get the preferred width and height based on the supplied width and height as opposed to the actual size of the current text container.
             Vector2 size = m_text.GetPreferredValues(Mathf.Infinity, Mathf.Infinity);
 
-            // Set the size of the RectTransform based on the new calculated values.
-            m_text.rectTransform.sizeDelta = new Vector2(size.x, size.y);
+            //// Set the size of the RectTransform based on the new calculated values.
+            //m_text.rectTransform.sizeDelta = new Vector2(size.x, size.y);
 
         }
 
@@ -50,7 +50,6 @@ namespace TMPro.Examples
         {
             GetTime();
             sleeping = GameObject.Find("Player01").GetComponent<Sleep>().inHouse;
-            print(sleeping);
 
             if (sleeping) {
                 HandleSleeping();

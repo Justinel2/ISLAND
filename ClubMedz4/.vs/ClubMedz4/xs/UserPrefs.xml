@@ -1,9 +1,9 @@
 ﻿<Properties StartupConfiguration="{0DDAFD7D-829A-85E1-3867-353224D6F92F}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/PreviousProject/Become/Become.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Sleep.cs">
     <Files>
-      <File FileName="Assets/PreviousProject/Become/Become.cs" Line="238" Column="1" />
-      <File FileName="Assets/PreviousProject/Eat/Pickupper2.cs" Line="141" Column="1" />
-      <File FileName="Assets/PreviousProject/OtherScripts/RigidBodyController.cs" Line="1" Column="1" />
+      <File FileName="Assets/EnergyUI.cs" Line="32" Column="41" />
+      <File FileName="Assets/TimeUI.cs" Line="57" Column="20" />
+      <File FileName="Assets/Sleep.cs" Line="4" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />

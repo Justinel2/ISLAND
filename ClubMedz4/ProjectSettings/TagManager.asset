@@ -15,6 +15,7 @@ TagManager:
   - Boid
   - ActivePlayer
   - Projectile
+  - shark
   layers:
   - Default
   - TransparentFX

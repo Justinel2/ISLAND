@@ -2985,8 +2985,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1407066946}
-  m_LocalRotation: {x: 9.963419e-10, y: 0.99733996, z: 0.07289003, w: -0.000000043435076}
-  m_LocalPosition: {x: -16.230507, y: -17.863247, z: 18.852386}
+  m_LocalRotation: {x: 0.2779854, y: 0.69503796, z: 0.33909208, w: -0.5697921}
+  m_LocalPosition: {x: -16.295578, y: -25.510544, z: 32.671158}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 324292656}
@@ -3582,7 +3582,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -3734,12 +3734,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d23ccb8fc867b458db90465b07f0303d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  upLift: {x: 0, y: 9.8, z: 0}
+  upLift: {x: 0, y: 15, z: 0}
   rb: {fileID: 0}
   viscosity: 1
   drag: 2
   initialSpeed: {x: 0, y: 0, z: 0}
-  yCenterOffset: -3.5
+  yCenterOffset: -4
 --- !u!82 &1694425287
 AudioSource:
   m_ObjectHideFlags: 0
@@ -3861,9 +3861,9 @@ RotationConstraint:
   m_Weight: 1
   m_RotationAtRest: {x: 0, y: 0, z: 0}
   m_RotationOffset: {x: 3.64, y: 3.34, z: 4.36}
-  m_AffectRotationX: 0
-  m_AffectRotationY: 0
-  m_AffectRotationZ: 0
+  m_AffectRotationX: 1
+  m_AffectRotationY: 1
+  m_AffectRotationZ: 1
   m_IsContraintActive: 1
   m_IsLocked: 0
   m_Sources: []
@@ -3878,8 +3878,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 4.62, y: 3.5665655, z: 11.461404}
-  m_Center: {x: 0, y: 2.0716457, z: 0}
+  m_Size: {x: 4.62, y: 4.0980797, z: 11.461404}
+  m_Center: {x: 0, y: 0.8184489, z: 0}
 --- !u!54 &1694425291
 Rigidbody:
   m_ObjectHideFlags: 0

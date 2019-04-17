@@ -1,0 +1,2 @@
+/Users/n_par/Documents/GitHub/ClubMedz/obj/Debug/Assembly-CSharp.csprojAssemblyReference.cache
+/Users/n_par/Documents/GitHub/ClubMedz/obj/Debug/Assembly-CSharp.csproj.CoreCompileInputs.cache

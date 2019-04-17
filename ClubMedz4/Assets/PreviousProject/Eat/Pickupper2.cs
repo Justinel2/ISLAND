@@ -51,6 +51,7 @@ public class Pickupper2 : MonoBehaviour
     {
         if (other.transform.tag == "pickupable")
         {
+            print(other.name);
             pickups.Add(other.gameObject);
         }
     }

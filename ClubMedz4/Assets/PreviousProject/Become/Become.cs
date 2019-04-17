@@ -21,7 +21,7 @@ public class Become : MonoBehaviour
 
     //Action Scripts
     //public Spawner actionSpawn;
-    private Pickupper actionPickup;
+    private Pickupper2 actionPickup;
     private Eat actionEat;
     private Throw actionThrow;
 
@@ -30,12 +30,12 @@ public class Become : MonoBehaviour
     {
         fpsCam = GetComponent<Camera>();
         firstCamPosition = GetComponent<Transform>().localPosition;
-        thirdCamPosition = firstCamPosition + new Vector3(0,5,-5);
+        thirdCamPosition = firstCamPosition + new Vector3(0, 5, -5);
         actionThrow = GetComponent<Throw>();
-        
+
         // set the current object to ActivePlayer
         gameObject.transform.parent.tag = "ActivePlayer";
-        
+
         //setting the audio sound component
         setAudioSource();
     }
@@ -48,7 +48,7 @@ public class Become : MonoBehaviour
         if (hit.collider != null && hit.collider.gameObject.GetComponentInParent<RigidBodyController>() != null && hit.collider.gameObject.tag == "Player")
         {
             Vector3 direction = hit.collider.gameObject.transform.position - transform.position;
-        
+
             if (direction != Vector3.zero)
             {
                 Quaternion endRotation = Quaternion.LookRotation(direction);
@@ -108,9 +108,9 @@ public class Become : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.P))
         {
             //call pickup function
-            actionPickup = GetComponentInParent<Pickupper>();
+            actionPickup = GetComponentInParent<Pickupper2>();
             actionPickup.PickUp();
-            
+
         }
         if (Input.GetKeyDown(KeyCode.E))
         {
@@ -136,7 +136,7 @@ public class Become : MonoBehaviour
         if (CamMode == 0)
         {
             this.GetComponent<Transform>().localPosition = thirdCamPosition;
-            this.GetComponent<Transform>().Rotate(0,0,0);
+            this.GetComponent<Transform>().Rotate(0, 0, 0);
         }
         if (CamMode == 1)
         {
@@ -150,7 +150,6 @@ public class Become : MonoBehaviour
     {
         //create a ray that is between the camera position and the positoin of the object the mouse clicked on
         Ray rayEnd = fpsCam.ScreenPointToRay(Input.mousePosition);
-        print("x");
         //if the mouse clicks on the gameobject and that gameobject has a CharacterController as a component, meaning that object is a player
         if (Physics.Raycast(rayEnd, out hit, clickRange) && hit.collider.gameObject.GetComponentInParent<RigidBodyController>() != null && hit.collider.gameObject.tag == "Player")
         {
@@ -172,24 +171,34 @@ public class Become : MonoBehaviour
         //code executes after the waitTime is elapsed 
         SwitchCameras();
     }
-   
+
 
     private void SwitchCameras()
     {
         //instantiate a new camera at the position of the object that was clicked on
         Become clickedObject = Instantiate(this, hit.collider.gameObject.transform.position, Quaternion.identity);
         clickedObject.gameObject.name = "Camera_Become";
-    
+
         //Set the new object to ActivePlayer tag
         hit.collider.transform.gameObject.tag = "ActivePlayer";
         //The other object loses its ActivePlayer tag
         gameObject.transform.parent.tag = "Player";
-        print(hit.collider.transform.gameObject.name);
 
         //make the camera a chid of the clicked game object and center its position relative to the player
         clickedObject.transform.SetParent(hit.collider.gameObject.transform);
-        clickedObject.transform.position += new Vector3( 0, 5, 10);
-        clickedObject.transform.localRotation = Quaternion.Euler(20, 180, 0);
+        clickedObject.transform.position = hit.collider.transform.gameObject.transform.position;
+        if (hit.collider.transform.gameObject.name == "boat")
+        {
+            clickedObject.transform.position += new Vector3(0, 5, 10);
+            clickedObject.transform.localRotation = Quaternion.Euler(20, 180, 0);
+            print(clickedObject.transform.position);
+        }
+
+        else
+        {
+            //clickedObject.transform.position -= new Vector3( 0, 5, 10);
+            clickedObject.transform.localRotation = Quaternion.Euler(0, 0, 0);
+        }
 
         //Destroy the old camera.
         Destroy(gameObject);

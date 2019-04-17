@@ -16,6 +16,8 @@ TagManager:
   - ActivePlayer
   - Projectile
   - shark
+  - Stats
+  - Menu
   layers:
   - Default
   - TransparentFX

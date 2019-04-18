@@ -8,6 +8,7 @@ public class Score : MonoBehaviour {
     public float hungerScore;
     public float energyScore;
     public int timeScore;
+    private GameObject player;
 
     public static float timer;
     private int minutes;
@@ -18,6 +19,8 @@ public class Score : MonoBehaviour {
     // Start is called before the first frame update
     void Start()
     {
+        player = GameObject.FindWithTag("ActivePlayer");
+
         energyScore = 100.0f;
         hungerScore = 100.0f;
 
@@ -46,6 +49,9 @@ public class Score : MonoBehaviour {
             if (seconds % 3 == 0 && seconds > 3)
                 energyScore -= 0.03f;
         }
+
+        if (player.transform.position.y <= -11)
+            energyScore -= 0.1f;
     }
 
     void GetHunger()
@@ -74,7 +80,7 @@ public class Score : MonoBehaviour {
     void GetTime()
     {
         timer += Time.deltaTime;
-        print(timer);
+        //print(timer);
         minutes = Mathf.FloorToInt(timer / 60F);
         seconds = Mathf.FloorToInt(timer - minutes * 60);
     }

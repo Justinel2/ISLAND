@@ -1,14 +1,15 @@
 ﻿<Properties StartupConfiguration="{0DDAFD7D-829A-85E1-3867-353224D6F92F}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Mortality.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/HeliceAnimation.cs">
     <Files>
       <File FileName="Assets/EnergyUI.cs" Line="28" Column="13" />
       <File FileName="Assets/TimeUI.cs" Line="41" Column="77" />
-      <File FileName="Assets/HungerUI.cs" Line="32" Column="12" />
-      <File FileName="Assets/Score.cs" Line="32" Column="21" />
-      <File FileName="Assets/GameUI.cs" Line="28" Column="25" />
-      <File FileName="Assets/PreviousProject/Eat/Eat.cs" Line="38" Column="30" />
+      <File FileName="Assets/HungerUI.cs" Line="7" Column="1" />
+      <File FileName="Assets/Score.cs" Line="83" Column="11" />
+      <File FileName="Assets/GameUI.cs" Line="4" Column="1" />
+      <File FileName="Assets/PreviousProject/Eat/Eat.cs" Line="22" Column="8" />
       <File FileName="Assets/PreviousProject/Eat/Pickupper2.cs" Line="9" Column="80" />
-      <File FileName="Assets/Mortality.cs" Line="25" Column="31" />
+      <File FileName="Assets/Mortality.cs" Line="35" Column="6" />
+      <File FileName="Assets/HeliceAnimation.cs" Line="16" Column="19" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />

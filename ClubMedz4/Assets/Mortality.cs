@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Mortality : MonoBehaviour
 {
@@ -27,6 +28,9 @@ public class Mortality : MonoBehaviour
         hungerScore = myScore.hungerScore;
         energyScore = myScore.energyScore;
 
-        //if (hungerScore <= 0 || )
+        if (hungerScore <= 0 || energyScore <= 0 || hitByShark == true)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
     }
 }

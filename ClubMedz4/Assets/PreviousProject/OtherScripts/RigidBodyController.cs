@@ -74,6 +74,12 @@ public class RigidBodyController : MonoBehaviour
         {
             isGrounded = true;
         }
+
+        if (col.gameObject.tag == ("shark"))
+        {
+            Mortality.hitByShark = true;
+            //print("shark");
+        }
     }
 
 }

@@ -37,7 +37,7 @@ public class GenerateChickens : MonoBehaviour
     {
         chickens.RemoveAll(GameObject => GameObject == null);
         nbChickens = chickens.Count;
-        print(nbChickens);
+        //print(nbChickens);
     }
 
     void GenerateFirstIsland()

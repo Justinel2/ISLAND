@@ -16,11 +16,6 @@ namespace TMPro.Examples
         private TMP_Text m_text;
 
         private const string k_label = "Days until rescue: <#ff0000>{0}</color>";
-
-        public static float timer;
-        public static bool timeStarted = false;
-        public int minutes;
-        private int seconds;
         private int time;
 
         void Start()
@@ -43,21 +38,13 @@ namespace TMPro.Examples
 
         void Update()
         {
-            calculateTime();
+            time = GameObject.Find("Score").GetComponent<Score>().timeScore;
 
             if (!isStatic)
             {
                 // Set text
                 m_text.SetText(k_label, time);
             }
-        }
-
-        void calculateTime()
-        {
-            timer += Time.deltaTime;
-            minutes = Mathf.FloorToInt(timer / 60F);
-            time = 5 - minutes;
-            //seconds = Mathf.FloorToInt(timer - minutes * 60);
         }
     }
 }

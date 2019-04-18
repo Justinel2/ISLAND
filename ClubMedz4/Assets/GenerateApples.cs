@@ -36,7 +36,7 @@ public class GenerateApples : MonoBehaviour {
     {
         apples.RemoveAll(GameObject => GameObject == null);
         nbApples = apples.Count;
-        print(nbApples);
+        //print(nbApples);
     }
 
     void GenerateFirstIsland()

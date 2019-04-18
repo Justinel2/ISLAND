@@ -21,6 +21,12 @@ public class Eat : MonoBehaviour
     public float duration = 5f;
     private Pickupper2 myFood;
     Transform foodLoc;
+    public int foodEaten;
+
+    private void Start()
+    {
+        foodEaten = 0;
+    }
 
     void FixedUpdate()
     {
@@ -39,9 +45,16 @@ public class Eat : MonoBehaviour
             {
                 Eatable eatable = child.GetComponent<Eatable>();
                 if (child.gameObject != null && eatable != null)
-                {
+                {   
                     Vector3 foodSize = child.gameObject.transform.localScale;
                     StartCoroutine(EatTheShit(child, foodSize, duration));
+
+                    if (eatable.name == "apple(Clone)")
+                        foodEaten += 10;
+                    else if (eatable.name == "chicken(Clone)")
+                        foodEaten += 100;
+                    else if (eatable.name == "water")
+                        foodEaten += 2;
                 }
             }
 
@@ -77,5 +90,5 @@ public class Eat : MonoBehaviour
         Destroy(_shit.gameObject, duration/3);
         yield return null;
     }
-   
+
 }

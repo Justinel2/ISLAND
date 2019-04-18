@@ -16,15 +16,7 @@ namespace TMPro.Examples
         private TMP_Text m_text;
 
         private const string k_label = "Hunger: <#ff0000>{0}%</color>";
-        private bool eating = false;
-
-        public static float hungerLevel = 100.0f;
-        public static float timer;
-        public static bool timeStarted = false;
-        public int minutes;
-        private int seconds;
-        private string time;
-        private float toFill;
+        public float hungerLevel;
 
         void Start()
         {
@@ -48,51 +40,13 @@ namespace TMPro.Examples
 
         void Update()
         {
-            GetTime();
-            eating = GameObject.Find("Player01").GetComponent<Sleep>().inHouse;
-
-            if (eating)
-            {
-                HandleEating();
-            }
-            else
-                HandleDecay();
+            hungerLevel = GameObject.Find("Score").GetComponent<Score>().hungerScore;
 
             if (!isStatic)
             {
                 // Set text
                 m_text.SetText(k_label, (int)hungerLevel);
             }
-        }
-
-        void GetTime()
-        {
-            timer += Time.deltaTime;
-            print(timer);
-            minutes = Mathf.FloorToInt(timer / 60F);
-            seconds = Mathf.FloorToInt(timer - minutes * 60);
-            //time = k_label + string.Format("{0:0}:{1:00}", minutes, seconds);
-        }
-
-        void HandleEating()
-        {
-            toFill = 100.0f - hungerLevel;
-            if (toFill > 0)
-            {
-                for (int i = 0; i <= toFill; i++)
-                {
-                    hungerLevel++;
-                }
-            }
-            else
-                return;
-        }
-
-        void HandleDecay()
-        {
-            if (seconds % 3 == 0 && seconds > 3)
-                hungerLevel -= 0.03f;
-            return;
         }
     }
 }

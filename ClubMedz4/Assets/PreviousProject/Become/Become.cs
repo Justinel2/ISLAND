@@ -191,7 +191,7 @@ public class Become : MonoBehaviour
         {
             clickedObject.transform.position += new Vector3(0, 5, 10);
             clickedObject.transform.localRotation = Quaternion.Euler(20, 180, 0);
-            print(clickedObject.transform.position);
+            //print(clickedObject.transform.position);
         }
 
         else

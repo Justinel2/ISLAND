@@ -3,7 +3,8 @@
         if (spontaniousBurn) burn();
     }      public void burn()     {
         // Where the flame particle system will be displayed
-        Vector3 combustionPos = transform.position;         buoyancy = GetComponent<buoyancy>();         GameObject particle = Instantiate(particles.gameObject);         particle.transform.position = transform.position;          if (buoyancy != null && (!buoyancy.isSubmerged || buoyancy == null))         {             if (!eternalBurn && temperature >= maxTemperature)             {                 Destroy(particle, 6);                  Invoke("explode", 5);             }              if (temperature < maxTemperature)             {                 temperature += 1 * conductiveness;             }
+        //Vector3 combustionPos = transform.position;
+        Vector3 combustionPos = new Vector3(0, 0, 0);         buoyancy = GetComponent<buoyancy>();         GameObject particle = Instantiate(particles.gameObject);         //print(particle.transform.position);         Vector3 particlePos = GameObject.Find("combustion").transform.position;         //particle.transform.position = transform.position;         particle.transform.position = combustionPos;          if (buoyancy != null && (!buoyancy.isSubmerged || buoyancy == null))         {             if (!eternalBurn && temperature >= maxTemperature)             {                 Destroy(particle, 6);                  Invoke("explode", 5);             }              if (temperature < maxTemperature)             {                 temperature += 1 * conductiveness;             }
 
             //When the temperature gets above 5, the object receives tag "Burning"
             if (temperature > 5)             {                 gameObject.tag = "Burning";             }         }       } 

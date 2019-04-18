@@ -1253,6 +1253,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: combustion
       objectReference: {fileID: 0}
+    - target: {fileID: 6344412458946085645, guid: 2c46fb1f05565b041b9a1245f0bdb1f8,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8104520948704851188, guid: 2c46fb1f05565b041b9a1245f0bdb1f8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3153,8 +3158,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1407066946}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -241.90475, y: -6.0461273, z: -117.38833}
+  m_LocalRotation: {x: 0.017578673, y: 0.67038894, z: 0.7416315, w: -0.015889972}
+  m_LocalPosition: {x: -279.78928, y: -32.613644, z: 11.702972}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 324292656}
@@ -3729,7 +3734,7 @@ MonoBehaviour:
   maxTemperature: 50
   conductiveness: 5
   particles: {fileID: 109315195}
-  spontaniousBurn: 1
+  spontaniousBurn: 0
   buoyancy: {fileID: 0}
 --- !u!54 &1590184742
 Rigidbody:
@@ -3758,8 +3763,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 4.6, y: 3.44, z: 4.34}
+  m_Center: {x: -23.41, y: -0.26, z: -3.54}
 --- !u!1 &1607734727
 GameObject:
   m_ObjectHideFlags: 0
@@ -3897,7 +3902,7 @@ MonoBehaviour:
     spaceCount: 110
     wordCount: 100
     linkCount: 0
-    lineCount: 17
+    lineCount: 16
     pageCount: 1
     materialCount: 1
   m_havePropertiesChanged: 0

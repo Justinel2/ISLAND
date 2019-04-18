@@ -19,7 +19,7 @@ public class Eat : MonoBehaviour
 {
     public float speed = 2f;
     public float duration = 5f;
-    private Pickupper myFood;
+    private Pickupper2 myFood;
     Transform foodLoc;
 
     void FixedUpdate()
@@ -29,7 +29,7 @@ public class Eat : MonoBehaviour
 
     public void EatFood()
     {
-        myFood = GetComponentInParent<Pickupper>();
+        myFood = GetComponentInParent<Pickupper2>();
 
         if (myFood.IsHoldingObject())
         {
